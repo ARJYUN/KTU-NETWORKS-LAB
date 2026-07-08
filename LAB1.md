@@ -430,4 +430,60 @@ Setting up tcpdump (4.9.3-4ubuntu0.3) ...
 Installing new version of config file /etc/apparmor.d/usr.sbin.tcpdump ...
 Processing triggers for man-db (2.9.1-1) ...
 mtech@programming-Lab-48:~$ 
+mtech@programming-Lab-48:~$ sudo tcpdump -A tcp
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on enp2s0, link-type EN10MB (Ethernet), capture size 262144 bytes
+15:39:04.314064 IP programming-Lab-48.59258 > tsa03s08-in-f3.1e100.net.http: Flags [.], ack 808568569, win 501, options [nop,nop,TS val 1664244473 ecr 1865083], length 0
+E..4
+'@.@.kG
+
+.N..+..z.P..K.01.......|.....
+c2Z...u{
+15:39:04.314208 IP tsa03s08-in-f3.1e100.net.http > programming-Lab-48.59258: Flags [.], ack 1, win 1091, options [nop,nop,TS val 1868155 ecr 1664193436], length 0
+E..4..@.@.....+.
+
+.N.P.z01....K....Cm......
+...{c1..
+15:39:07.859602 IP programming-Lab-48.41648 > 142.251.152.119.https: Flags [P.], seq 3844387308:3844387347, ack 3267998774, win 501, options [nop,nop,TS val 1421399954 ecr 1850760], length 39
+E..[..@.@.	.
+
+.N...w.....$.....6....3......
+T.....=.....".2...x.M]...n.....5..."N._.s..j...
+15:39:07.859654 IP programming-Lab-48.41572 > lcbome-in-f141.1e100.net.https: Flags [P.], seq 3092080482:3092080521, ack 1909234754, win 501, options [nop,nop,TS val 2846166821 ecr 1851597], length 39
+E..[..@.@..
+
+.N.....d...Mgbq..B....y......
+...%..@.....".. ..f.a>h.......,...$...8x...<...
+15:39:07.859808 IP 142.251.152.119.https > programming-Lab-48.41648: Flags [.], ack 39, win 1540, options [nop,nop,TS val 1869218 ecr 1421399954], length 0
+E..4..@.@.v....w
+
+.N.......6.$.......@.....
+....T...
+15:39:07.876346 IP 142.251.152.119.https > programming-Lab-48.41648: Flags [P.], seq 1:40, ack 39, win 1540, options [nop,nop,TS val 1869223 ecr 1421399954], length 39
+E..[..@.@.u....w
+
+.N.......6.$......1l.....
+....T......."...C..?]....#@.......m)c....f.S.)P
+15:39:07.894716 IP lcbome-in-f141.1e100.net.https > programming-Lab-48.41572: Flags [P.], seq 1:40, ack 39, win 1540, options [nop,nop,TS val 1869229 ecr 2846166821], length 39
+E..[..@.@.......
+
+.N...dq..B.Mg......y.....
+.......%...."1...b..\Sr..va#...............p62~
+15:39:07.894764 IP programming-Lab-48.41572 > lcbome-in-f141.1e100.net.https: Flags [.], ack 40, win 501, options [nop,nop,TS val 2846166856 ecr 1869229], length 0
+E..4..@.@..3
+
+.N.....d...Mg.q..i....y......
+...H....
+15:39:07.918032 IP programming-Lab-48.41648 > 142.251.152.119.https: Flags [.], ack 40, win 501, options [nop,nop,TS val 1421400013 ecr 1869223], length 0
+E..4..@.@.	.
+
+.N...w.....$.....]....2......
+T.......
+^C
+9 packets captured
+9 packets received by filter
+0 packets dropped by kernel
+mtech@programming-Lab-48:~$ 
+
+
 
