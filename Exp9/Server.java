@@ -1,7 +1,7 @@
 import java.io.*;
 import java.net.*;
 
-public class FileServer {
+public class Server {
     public static void main(String[] args) throws Exception {
 
         ServerSocket server = new ServerSocket(5000);
