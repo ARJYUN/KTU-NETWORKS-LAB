@@ -1,30 +1,40 @@
 import java.io.*;
 import java.net.*;
+import java.util.*;
 
 public class Client {
+
     public static void main(String[] args) throws Exception {
 
-        Socket socket = new Socket("localhost", 5000);
+        Socket s = new Socket("localhost", 5001);
 
-        DataInputStream in = new DataInputStream(socket.getInputStream());
-        DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+        DataInputStream dis =
+                new DataInputStream(s.getInputStream());
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        DataOutputStream dos =
+                new DataOutputStream(s.getOutputStream());
+
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter file name: ");
-        String fileName = br.readLine();
+        String fileName = sc.nextLine();
 
-        out.writeUTF(fileName);
+        // Send file name to server
+        dos.writeUTF(fileName);
 
-        System.out.println(in.readUTF()); // Display PID
+        String response;
 
         while (true) {
-            String msg = in.readUTF();
-            if (msg.equals("END"))
+
+            response = dis.readUTF();
+
+            if (response.equals("END"))
                 break;
-            System.out.println(msg);
+
+            System.out.println(response);
         }
 
-        socket.close();
+        s.close();
+        sc.close();
     }
 }
